@@ -1,9 +1,9 @@
-nbproject
+nbproject/private
 ._*
 .~lock.*
 .buildpath
 .DS_Store
-.idea
+.idea/workspace.xml
 .project
 .settings
 composer.lock
