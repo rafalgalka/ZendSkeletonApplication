@@ -32,6 +32,15 @@ module.exports = function (grunt) {
                     outputStyle: 'expanded'
                 }
             }
+        },
+        watch: {
+            compass: {
+                files: [
+                    '<%= path.assets %>/scss/**/*.scss',
+                    '<%= path.assets %>/images/sprites/**/*.png'
+                ],
+                tasks: ['compass:dev']
+            }
         }
     });
 };
