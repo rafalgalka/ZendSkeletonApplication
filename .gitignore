@@ -8,3 +8,5 @@ nbproject/private
 .settings
 composer.lock
 vendor
+node_modules
+public/css/*.css

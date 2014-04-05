@@ -1,0 +1,14 @@
+{
+  "name": "ZendSkeletonApplication",
+  "description": "Skeleton Application for ZF2",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:modernweb/thebrave-dove-yt.git"
+  },
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "matchdep": "~0.3.0",
+    "grunt": "~0.4.4",
+    "grunt-contrib-compass": "~0.7.2"
+  }
+}
