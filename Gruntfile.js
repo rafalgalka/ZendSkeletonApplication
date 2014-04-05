@@ -40,6 +40,16 @@ module.exports = function (grunt) {
                     '<%= path.assets %>/images/sprites/**/*.png'
                 ],
                 tasks: ['compass:dev']
+            },
+            livereload: {
+                options: {
+                    livereload: true
+                },
+                files: [
+                    '<%= path.assets %>/css/*.css',
+                    '<%= path.assets %>/js/**/*.js',
+                    'module/**/view/**/*.phtml'
+                ]
             }
         }
     });
