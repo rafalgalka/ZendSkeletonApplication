@@ -12,11 +12,12 @@ module.exports = function (grunt) {
         package: grunt.file.readJSON('package.json'),
         compass: {
             options: {
-                basePath: '<%= path.assets %>',
-                sassDir: 'scss',
-                javascriptsDir: 'js',
-                cssDir: 'css',
-                cacheDir: '../data/cache/.sass',
+                sassDir: '<%= path.assets %>/scss',
+                imagesDir: '<%= path.assets %>/images',
+                javascriptsDir: '<%= path.assets %>/js',
+                fontsDir: '<%= path.assets %>/fonts',
+                cssDir: '<%= path.assets %>/css',
+                cacheDir: 'data/cache/.sass',
                 importPath: [
                     'vendor/bootstrap-sass/vendor/assets/stylesheets'
                 ]
@@ -51,6 +52,72 @@ module.exports = function (grunt) {
                     'module/**/view/**/*.phtml'
                 ]
             }
+        },
+        clean: {
+            dist: [
+                '<%= compass.options.cssDir %>/*.css',
+                '<%= compass.options.imagesDir %>/sprites/*.png',
+                '<%= path.dist %>/**'
+            ]
+        },
+        copy: {
+            dist: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '.',
+                    dest: '<%= path.dist %>',
+                    src: [
+                        '**',
+                        '!.*/**',
+                        '!*.bowerrc',
+                        '!*.gitignore',
+                        '!*.json',
+                        '!*.lock',
+                        '!*.js',
+                        '!*.iml',
+                        '!LICENSE.txt',
+                        '!README.md',
+                        '!<%= path.assets %>/scss/**',
+                        '!nbproject/**',
+                        '!node_modules/**',
+                        '!data/cache/*',
+                        '!data/tmp/*',
+                        '!tests/**',
+                        '!vendor/**/tests/**',
+                        '!vendor/**/test/**',
+                        '!vendor/**/unitTests/**',
+                        '!vendor/**/examples/**',
+                        '!vendor/**/Examples/**',
+                        '!vendor/**/demos/**',
+                        '!vendor/**/documentation/**'
+                    ]
+                }]
+            }
+        },
+        useminPrepare: {
+            html: 'module/**/view/**/*.phtml',
+            options: {
+                root: '<%= path.dist %>',
+                staging: 'data/tmp'
+            }
+        },
+        usemin: {
+            html: ['<%= path.dist %>/module/**/view/**/*.phtml']
         }
     });
+
+    grunt.registerTask('build', [
+        'clean:dist',
+        'compass:dist',
+        'copy:dist',
+        'useminPrepare',
+        'concat',
+        'uglify',
+        'usemin'
+    ]);
+
+    grunt.registerTask('default', [
+        'build'
+    ]);
 };
