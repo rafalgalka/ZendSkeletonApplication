@@ -3,7 +3,10 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bootstrap-sass/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jquery/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jquery/src" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zendframework" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zendxml" />
     </content>
@@ -12,14 +15,20 @@
       <library name="PHP">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/zendframework/zendframework" />
-          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/jquery/dist" />
+          <root url="file://$MODULE_DIR$/vendor/jquery/src" />
           <root url="file://$MODULE_DIR$/vendor/zendframework/zendxml" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/bootstrap-sass/vendor" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/zendframework/zendframework" />
-          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/jquery/dist" />
+          <root url="file://$MODULE_DIR$/vendor/jquery/src" />
           <root url="file://$MODULE_DIR$/vendor/zendframework/zendxml" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/bootstrap-sass/vendor" />
         </SOURCES>
       </library>
     </orderEntry>
