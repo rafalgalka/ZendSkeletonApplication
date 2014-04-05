@@ -10,3 +10,4 @@ composer.lock
 vendor
 node_modules
 public/css/*.css
+public/images/sprites/*.png

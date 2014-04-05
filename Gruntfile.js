@@ -12,12 +12,11 @@ module.exports = function (grunt) {
         package: grunt.file.readJSON('package.json'),
         compass: {
             options: {
-                sassDir: '<%= path.assets %>/scss',
-                imagesDir: '<%= path.assets %>/images',
-                javascriptsDir: '<%= path.assets %>/js',
-                fontsDir: '<%= path.assets %>/fonts',
-                cssDir: '<%= path.assets %>/css',
-                cacheDir: 'data/cache/.sass',
+                basePath: '<%= path.assets %>',
+                sassDir: 'scss',
+                javascriptsDir: 'js',
+                cssDir: 'css',
+                cacheDir: '../data/cache/.sass',
                 importPath: [
                     'vendor/bootstrap-sass/vendor/assets/stylesheets'
                 ]
