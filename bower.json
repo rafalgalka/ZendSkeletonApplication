@@ -1,7 +1,7 @@
 {
   "name": "ZendSkeletonApplication",
   "dependencies": {
-    "bootstrap-sass": "twbs/bootstrap-sass#~3.1.1",
+    "bootstrap-sass-official": "3.3.1",
     "jquery": "1.11.x"
   }
 }

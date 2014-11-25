@@ -19,7 +19,7 @@ module.exports = function (grunt) {
                 cssDir: '<%= path.assets %>/css',
                 cacheDir: 'data/cache/.sass',
                 importPath: [
-                    'vendor/bootstrap-sass/vendor/assets/stylesheets'
+                    'vendor/bootstrap-sass-official/assets/stylesheets'
                 ]
             },
             dist: {
